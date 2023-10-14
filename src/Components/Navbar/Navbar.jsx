@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
         <div className='w-4/5 mx-auto'>
@@ -7,7 +8,9 @@ const Navbar = () => {
                 <div className="flex-1">
                     <ul className='md:flex gap-5 text-xl font-bold hidden'>
                         <li>
-                        <img className='w-36' src={logo} alt="" />
+                            <Link to="/">
+                                <img className='w-36' src={logo} alt="" />
+                            </Link>
                         </li>
                         <li>Solutions</li>
                         <li>Feature</li>

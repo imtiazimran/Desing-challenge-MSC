@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
+import AccountantDetails from './Components/AcountenenDetails/AcountenenDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
       {
         path : "/",
         element : <Home/>
+      },
+      {
+        path : "/accountant/:Id",
+        element : <AccountantDetails/>,
+        loader : () => fetch('http://localhost:5000/acountent')
       }
     ]
   },
