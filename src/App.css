@@ -1,0 +1,9 @@
+.spacialColor {
+    background: linear-gradient(90deg, rgba(0, 118, 206, 1), rgba(148, 0, 211, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.spacialBackGround {
+    background: linear-gradient(90deg, rgba(0, 118, 206, 1), rgba(148, 0, 211, 1));
+}
