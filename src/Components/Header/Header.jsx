@@ -33,8 +33,8 @@ const Header = () => {
     return (
         <div>
             <div className="hero min-h-screen my-[126px]">
-                <div className="hero-content flex-col md:flex-row-reverse">
-                    <div className='w-1/2'>
+                <div className="hero-content flex-col-reverse md:flex-row-reverse">
+                    <div className='md:w-1/2'>
                         <div className='flex gap-[16px]'>
                             <div className='w-1/3 mt-[83px]'>
                                 <img src={headerImg1} className="max-w-sm rounded-[20px] shadow-2xl w-full" alt="Header 1" />
@@ -47,7 +47,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2'>
                         <h1 className="text-6xl font-bold">Find <span className='spacialColor'>Partners</span>  (CAs) <br /> available online</h1>
                         <p className="py-6"> <span className='font-bold'>CONNECT</span> with us where your services are listed and visible to a myriad <br /> of businesses seeking CA’s for compliance support</p>
                         <div>
@@ -63,13 +63,16 @@ const Header = () => {
                                 onClick={() => handleSearch(searchQuery)}
                             >Search</button>
                         </div>
-                        <ul>
-                            {searchResults.map(result => (
-                                <li key={result._id}>
-                                    <Link to={`/accountant/${result._id}`}>{result.name}</Link>
-                                </li>
-                            ))}
-                        </ul>
+                        {
+                            searchResults &&
+                            <ul>
+                                {searchResults.map(result => (
+                                    <li key={result._id}>
+                                        <Link to={`/accountant/${result._id}`}>{result.name}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        }
                     </div>
                 </div>
             </div>
