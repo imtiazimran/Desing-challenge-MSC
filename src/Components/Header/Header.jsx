@@ -33,7 +33,7 @@ const Header = () => {
     return (
         <div>
             <div className="hero min-h-screen my-[126px]">
-                <div className="hero-content flex-row-reverse">
+                <div className="hero-content flex-col md:flex-row-reverse">
                     <div className='w-1/2'>
                         <div className='flex gap-[16px]'>
                             <div className='w-1/3 mt-[83px]'>

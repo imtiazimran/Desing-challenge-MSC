@@ -1,12 +1,11 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
 import Header from '../Header/Header';
 import WantToJoin from '../WantToJoin/WantToJoin';
 import Promote from '../Promotion/Promote';
 
 const Home = () => {
     return (
-        <div>
+        <div className='w-11/12 md:w-full'>
             <Header/>
             <WantToJoin/>
             <Promote/>
