@@ -12,7 +12,7 @@ const Header = () => {
     // Function to handle search
     const handleSearch = async (query) => {
         try {
-            const response = await axios.get(`http://localhost:5000/search?query=${query}`);
+            const response = await axios.get(`https://desing-challenge-backend.vercel.app/search?query=${query}`);
             if (response.status === 200) {
                 const data = response.data;
                 setSearchResults(data);

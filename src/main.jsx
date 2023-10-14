@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path : "/accountant/:Id",
         element : <AccountantDetails/>,
-        loader : () => fetch('http://localhost:5000/acountent')
+        loader : () => fetch('https://desing-challenge-backend.vercel.app/acountent')
       }
     ]
   },
